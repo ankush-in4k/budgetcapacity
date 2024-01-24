@@ -16,6 +16,8 @@ let url = location.href.substr(0,location.href.indexOf("#"));
         let user = localStorage.getItem("user");
         user = localStorage.getItem("user");
         user = JSON.parse(user);
+        let what = "load";
+        
         if(what === "updateBudget"){
             localStorage.setItem("user",JSON.stringify({...user,budget,modify:new Date().toLocaleString()}));
         }else if(what === "addExpense"){
